@@ -6,7 +6,8 @@ const schemaValidator = require('./validators/schemaValidator');
 const userController = require('./controllers/user');
 const urlController = require('./controllers/url');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://pari:mlab123@ds239055.mlab.com:39055/url2png');
+// mongoose.connect('mongodb://localhost/test');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
